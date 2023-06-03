@@ -1,0 +1,61 @@
+Steps to create APIs
+
+Step 1: setup
+
+dotnet new webapi
+dotnet new sln
+dotnet sln add <ProjectName>
+
+Step 2: NuGet Packages & Code-Genration Tools
+
+dotnet add package MediatR --version 11.1.0
+dotnet add package MediatR.Extensions.Microsoft.DependencyInjection
+dotnet add package Microsoft.AspNetCore.OpenApi                    
+dotnet add package Microsoft.EntityFrameworkCore                   
+dotnet add package Microsoft.EntityFrameworkCore.Design            
+dotnet add package Microsoft.EntityFrameworkCore.Tools             
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 7.0.3
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL           
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL.Design    
+dotnet add package Swashbuckle.AspNetCore                          
+dotnet add package Npgsql.EntityFrameworkCore.SqlServer
+
+dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
+dotnet tool install -g dotnet-aspnet-codegenerator
+dotnet tool update -g dotnet-aspnet-codegenerator
+
+Step 3: Generate Model & DdContext
+
+Example:
+dotnet ef dbcontext scaffold "User ID=myusername;Password=mypassword;Host=localhost;Port=5432;Database=mydatabase;Search Path=public" Npgsql.EntityFrameworkCore.PostgreSQL --output-dir Models
+
+Actual:
+dotnet ef dbcontext scaffold "User ID=burner;Password=burner;Host=localhost;Port=5432;Database=monkey_db;Search Path=public;CommandTimeout =120;" Npgsql.EntityFrameworkCore.PostgreSQL --output-dir Models
+
+Step 4: Generate Controller
+
+Example:
+dotnet-aspnet-codegenerator -p "C:\MyProject\MyProject.csproj" controller -name MyDemoModelController -api -m My.Namespace.Models.MyDemoModel -dc MyDemoDbContext -outDir Controllers -namespace My.Namespace.Controllers
+
+Actual:
+dotnet-aspnet-codegenerator -p "C:\FullStack\MonkeyOne\MonkeyAPI\MonkeyAPI.csproj" controller -name MyMonkeyTableController -api -m MonkeyAPI.Models.Monkeytable -dc MonkeyDbContext -outDir Controllers -namespace MonkeyAPI.Controllers
+
+
+Step 5: Edit Program.cs & appsettings.json
+
+ADD LINES to Program.cs:
+
+using Microsoft.EntityFrameworkCore;
+builder.Services.AddDbContext<MonkeyDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("MonkeyDB")));
+
+ADD LINES to appsettings.json:
+
+"ConnectionStrings": {
+    "MonkeyDB": "User ID=burner;Password=burner;Host=localhost;Port=5432;Database=monkey_db;Search Path=public;CommandTimeout =120;"
+  }
+
+
+Test APIs
