@@ -1,0 +1,12 @@
+--Updating Node js
+node -v
+npm install -g n
+n latest
+
+--Upgrading Angular CLI
+ng v
+npm uninstall -g @angular/cli
+npm install -g @angular/cli@latest
+
+--Project Setup
+ng new MonkeyTS
