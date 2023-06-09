@@ -1,3 +1,7 @@
+--Git command to create new branch and switch to it 
+git checkout -b <name-of-new-branch>
+git branch
+
 --Updating Node js
 node -v
 npm install -g n
@@ -9,4 +13,4 @@ npm uninstall -g @angular/cli
 npm install -g @angular/cli@latest
 
 --Project Setup
-ng new MonkeyTS
+ng new monkey-ui
