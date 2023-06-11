@@ -12,5 +12,11 @@ ng v
 npm uninstall -g @angular/cli
 npm install -g @angular/cli@latest
 
+--Installing Angular Compiler CLI
+npm install -g @angular/compiler-cli
+
 --Project Setup
-ng new monkey-ui
+ng new <name-of-the-project>
+
+--Creating Service
+ng g s <name-of-the-service>
