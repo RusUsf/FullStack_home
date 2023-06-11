@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TipService } from './tip.service';
+import { DataRunnerService } from './data-runner.service';
 
-describe('TipService', () => {
-  let service: TipService;
+describe('DataRunnerService', () => {
+  let service: DataRunnerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TipService);
+    service = TestBed.inject(DataRunnerService);
   });
 
   it('should be created', () => {

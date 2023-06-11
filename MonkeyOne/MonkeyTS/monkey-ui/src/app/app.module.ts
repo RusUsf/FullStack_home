@@ -1,26 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormGroup, FormControl } from '@angular/forms';
-import { TipService } from './tip.service';
+import { ValuesComponent } from './values/values.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ValuesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    FormGroup,
-    FormControl,
-    TipService,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

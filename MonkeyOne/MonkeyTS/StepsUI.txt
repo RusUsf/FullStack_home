@@ -20,3 +20,13 @@ ng new <name-of-the-project>
 
 --Creating Service
 ng g s <name-of-the-service>
+
+--Serving the web app
+ng serve
+
+
+
+--Steps to consume Back-End API
+
+--Step 1 - Create a Service to Consume Web API
+ng g s <servce-name>
