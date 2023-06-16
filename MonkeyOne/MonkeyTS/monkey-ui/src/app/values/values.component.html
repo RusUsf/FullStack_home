@@ -1,5 +1,28 @@
+<!-- Just to display a list of values from the API. -->
 <ul>
     <li *ngFor="let value of values">
         {{ value.tip }}
     </li>
 </ul>
+
+<!-- Creating a Search Form -->
+<form (submit)="search()">
+    <input [(ngModel)]="searchTerm" name="searchTerm" placeholder="Enter ID" required>
+    <button type="submit">Search</button>
+</form>
+
+<!-- Table to display all values -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Tip</th>
+    </tr>
+    <tr *ngFor="let value of values">
+        <td>{{ value.id }}</td>
+        <td>{{ value.tip }}</td>
+    </tr>
+</table>
+
+<!-- Display the searched value -->
+<h2>Searched Value</h2>
+<p *ngIf="searchedValue">ID: {{searchedValue.id}}, Tip: {{searchedValue.tip}}</p>
