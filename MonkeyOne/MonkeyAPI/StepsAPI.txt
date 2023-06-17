@@ -80,3 +80,13 @@ dotnet build
 dotnet run
 
 URL:"http://localhost:5099/swagger/index.html"
+
+
+
+--NEXT: Adding Serilog 
+dotnet add package Serilog
+dotnet add package Serilog.Extensions.Logging
+dotnet add package Serilog.Sinks.Console
+dotnet add package Serilog.Sinks.PostgreSQL
+
+

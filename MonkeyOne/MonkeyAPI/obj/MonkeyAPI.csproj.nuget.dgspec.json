@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
+    "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
   },
   "projects": {
-    "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
+    "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "projectName": "MonkeyAPI",
-        "projectPath": "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -88,6 +88,22 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Serilog.Sinks.PostgreSQL": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
