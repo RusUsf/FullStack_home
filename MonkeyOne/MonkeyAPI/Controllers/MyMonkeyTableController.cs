@@ -85,7 +85,10 @@ namespace MonkeyAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Monkeytable>> PostMonkeytable(Monkeytable monkeytable)
         {
-          if (_context.Monkeytables == null)
+
+            Console.WriteLine("Monkeytable received by server: ", monkeytable);
+
+            if (_context.Monkeytables == null)
           {
               return Problem("Entity set 'MonkeyDbContext.Monkeytables'  is null.");
           }

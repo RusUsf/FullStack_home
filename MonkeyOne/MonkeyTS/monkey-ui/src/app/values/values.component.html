@@ -1,9 +1,9 @@
 <!-- Just to display a list of values from the API. -->
-<ul>
+<!-- <ul>
     <li *ngFor="let value of values">
         {{ value.tip }}
     </li>
-</ul>
+</ul> -->
 
 <!-- Creating a Search Form -->
 <form (submit)="search()">
@@ -12,7 +12,7 @@
 </form>
 
 <!-- Table to display all values -->
-<table>
+<!-- <table>
     <tr>
         <th>ID</th>
         <th>Tip</th>
@@ -21,8 +21,14 @@
         <td>{{ value.id }}</td>
         <td>{{ value.tip }}</td>
     </tr>
-</table>
+</table> -->
 
 <!-- Display the searched value -->
 <h2>Searched Value</h2>
 <p *ngIf="searchedValue">ID: {{searchedValue.id}}, Tip: {{searchedValue.tip}}</p>
+
+<!-- Form for the new value -->
+<form (submit)="create()">
+    <input [(ngModel)]="newValue.tip" name="tip" placeholder="Enter Tip" required>
+    <button type="submit">Create</button>
+</form>

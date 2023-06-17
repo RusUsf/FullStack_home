@@ -71,7 +71,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
-})
+11:05 PM 6/15/2023})
 export class DataService {
   apiUrl = 'https://localhost:5001/values'; // Your API URL
 
