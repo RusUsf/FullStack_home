@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-
+using NpgsqlTypes;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
 namespace MonkeyAPI.Models;
 
 public partial class MonkeyDbContext : DbContext
@@ -23,6 +26,17 @@ public partial class MonkeyDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Create a new method.
+        void ConfigureMonkeytable(ModelBuilder builder)
+        {
+            // Use the builder variable in the new method.
+            builder.UseSerialColumns();
+        }
+
+        // Call the new method.
+        ConfigureMonkeytable(modelBuilder);
+
+
         modelBuilder.Entity<Monkeytable>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("monkeytable_pkey");
@@ -30,11 +44,12 @@ public partial class MonkeyDbContext : DbContext
             entity.ToTable("monkeytable");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.Tip)
                 .HasColumnType("character varying")
                 .HasColumnName("tip");
+            
         });
 
         OnModelCreatingPartial(modelBuilder);
