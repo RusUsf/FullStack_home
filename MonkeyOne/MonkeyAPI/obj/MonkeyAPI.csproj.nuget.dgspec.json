@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Learn to Code_1\\Securables\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
+    "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Learn to Code_1\\Securables\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
+    "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Learn to Code_1\\Securables\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "projectName": "MonkeyAPI",
-        "projectPath": "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Learn to Code_1\\Securables\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
-        "packagesPath": "C:\\Users\\rus_d\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Learn to Code_1\\Securables\\FullStack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
+        "projectPath": "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rus_d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -103,24 +105,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.2, 7.0.2]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -129,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
