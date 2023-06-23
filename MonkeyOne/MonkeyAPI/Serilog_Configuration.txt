@@ -1,0 +1,55 @@
+{
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.PostgreSQL.Configuration",
+      "Serilog.Enrichers.Environment"
+    ],
+    "Properties": {
+      "Application": "OnMed.Infrastructure.Identity"
+    },
+    "Enrich": [
+      "WithMachineName"
+    ],
+    "MinimumLevel": "Warning",
+    "Override": {
+      "Microsoft.AspNetCore": "Warning"
+    },
+    "WriteTo": [
+      {
+        "Name": "PostgreSQL",
+        "Args": {
+          "connectionString": "DefaultConnection",
+          "tableName": "\"Logs\""
+        }
+      }
+    ]
+  },
+  "Columns": {
+    "\"Application\"": {
+      "Name": "SinglePropertyColumnWriter",
+      "Args": {
+        "propertyName": "Application",
+        "writeMethod": "Raw"
+      }
+    },
+    "\"Message\"": "RenderedMessageColumnWriter",
+    "\"MessageTemplate\"": "MessageTemplateColumnWriter",
+    "\"Level\"": {
+      "Name": "LevelColumnWriter",
+      "Args": {
+        "renderAsText": true,
+        "dbType": "Varchar"
+      }
+    },
+    "\"TimeStamp\"": "TimestampColumnWriter",
+    "\"Exception\"": "ExceptionColumnWriter",
+    "\"Properties\"": {
+      "Name": "LogEventSerializedColumnWriter",
+      "Args": {
+        "renderAsText": true,
+        "dbType": "Varchar"
+      }
+    }
+  }
+ 
+}

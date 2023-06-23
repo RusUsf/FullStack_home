@@ -1440,6 +1440,25 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Configuration.Binder": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -2494,6 +2513,20 @@
           "lib/net5.0/Serilog.Sinks.PostgreSQL.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Serilog.Sinks.PostgreSQL.Configuration/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.1",
+          "Serilog.Sinks.PostgreSQL": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/6.5.0": {
@@ -6085,6 +6118,19 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.1": {
+      "sha512": "NpGh3Y/VOBs6hvjKHMsdbtrvGvMO+cBqZ7YT/Rc4iFy0C4ogSnl1lBAq69L1LS6gzlwDBZDZ7WcvzSDzk5zfzA==",
+      "type": "package",
+      "path": "microsoft.extensions.options.configurationextensions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "microsoft.extensions.options.configurationextensions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.options.configurationextensions.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "sha512": "um1KU5kxcRp3CNuI8o/GrZtD4AIOXDk+RLsytjZ9QPok3ttLUelLKpilVPuaFT3TFjOhSibUAso0odbOaCDj3Q==",
       "type": "package",
@@ -7782,6 +7828,19 @@
         "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.xml",
         "serilog.sinks.postgresql.2.3.0.nupkg.sha512",
         "serilog.sinks.postgresql.nuspec"
+      ]
+    },
+    "Serilog.Sinks.PostgreSQL.Configuration/1.0.1": {
+      "sha512": "LN9MVZeB8i38GU6iAFya9La74Z8TlD/oSjWU8l9fs7dN/92bhiUUQrnrAZ3IiJCJMc0D+X5DUNL4eoleV6ytxw==",
+      "type": "package",
+      "path": "serilog.sinks.postgresql.configuration/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll",
+        "serilog.sinks.postgresql.configuration.1.0.1.nupkg.sha512",
+        "serilog.sinks.postgresql.configuration.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.5.0": {
@@ -11869,6 +11928,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.3",
+      "Npgsql >= 7.0.4",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.4",
       "Npgsql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.0",
       "Serilog >= 2.12.0",
@@ -11877,6 +11937,7 @@
       "Serilog.Formatting.Compact >= 1.1.0",
       "Serilog.Sinks.Console >= 4.1.0",
       "Serilog.Sinks.PostgreSQL >= 2.3.0",
+      "Serilog.Sinks.PostgreSQL.Configuration >= 1.0.1",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -11887,11 +11948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
       "projectName": "MonkeyAPI",
-      "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11961,6 +12022,10 @@
             "target": "Package",
             "version": "[7.0.3, )"
           },
+          "Npgsql": {
+            "target": "Package",
+            "version": "[7.0.4, )"
+          },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[7.0.4, )"
@@ -11992,6 +12057,10 @@
           "Serilog.Sinks.PostgreSQL": {
             "target": "Package",
             "version": "[2.3.0, )"
+          },
+          "Serilog.Sinks.PostgreSQL.Configuration": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

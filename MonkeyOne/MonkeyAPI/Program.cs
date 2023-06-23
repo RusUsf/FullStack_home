@@ -3,6 +3,7 @@ using Npgsql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Serilog.Sinks.PostgreSQL;
 using Microsoft.Extensions.Configuration;
 
 
@@ -17,10 +18,11 @@ IConfiguration configuration = builder.Configuration;
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console() // Writing to Console 
-    .WriteTo.PostgreSQL(configuration.GetConnectionString("MonkeyDB"),"\"Logs\"")
+    //.WriteTo.PostgreSQL(configuration.GetConnectionString("MonkeyDB"),"logs")
     .CreateLogger();
 
-builder.Host.UseSerilog();
+builder.Host.UseSerilog((ctx, lc) => lc
+        .ReadFrom.Configuration(configuration));
 
 try
 {

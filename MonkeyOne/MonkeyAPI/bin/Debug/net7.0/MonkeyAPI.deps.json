@@ -16,6 +16,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.3",
+          "Npgsql": "7.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
           "Serilog": "2.12.0",
@@ -24,6 +25,7 @@
           "Serilog.Formatting.Compact": "1.1.0",
           "Serilog.Sinks.Console": "4.1.0",
           "Serilog.Sinks.PostgreSQL": "2.3.0",
+          "Serilog.Sinks.PostgreSQL.Configuration": "1.0.1",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -1105,6 +1107,14 @@
           "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.0"
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {},
       "Microsoft.Identity.Client/4.45.0": {
         "dependencies": {
@@ -1764,6 +1774,19 @@
           "lib/net5.0/Serilog.Sinks.PostgreSQL.dll": {
             "assemblyVersion": "2.3.0.0",
             "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.PostgreSQL.Configuration/1.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.1",
+          "Serilog.Sinks.PostgreSQL": "2.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
@@ -2962,6 +2985,13 @@
       "path": "microsoft.extensions.options/7.0.0",
       "hashPath": "microsoft.extensions.options.7.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NpGh3Y/VOBs6hvjKHMsdbtrvGvMO+cBqZ7YT/Rc4iFy0C4ogSnl1lBAq69L1LS6gzlwDBZDZ7WcvzSDzk5zfzA==",
+      "path": "microsoft.extensions.options.configurationextensions/2.1.1",
+      "hashPath": "microsoft.extensions.options.configurationextensions.2.1.1.nupkg.sha512"
+    },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3423,6 +3453,13 @@
       "sha512": "sha512-OdsbJOeloukuJuUfsb1JbEecRuXQCGtcDbWDCe0/kQJrcQUdIXRdkYdfgO4wAq5Y4kC0sde9bfZHSLjEIhJyFw==",
       "path": "serilog.sinks.postgresql/2.3.0",
       "hashPath": "serilog.sinks.postgresql.2.3.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.PostgreSQL.Configuration/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LN9MVZeB8i38GU6iAFya9La74Z8TlD/oSjWU8l9fs7dN/92bhiUUQrnrAZ3IiJCJMc0D+X5DUNL4eoleV6ytxw==",
+      "path": "serilog.sinks.postgresql.configuration/1.0.1",
+      "hashPath": "serilog.sinks.postgresql.configuration.1.0.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
