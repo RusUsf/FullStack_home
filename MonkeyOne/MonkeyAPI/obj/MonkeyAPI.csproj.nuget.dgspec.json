@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
+    "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
+    "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "projectName": "MonkeyAPI",
-        "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\FullStack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\More\\More\\Git_repos\\fullstack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -93,9 +93,17 @@
               "target": "Package",
               "version": "[2.12.0, )"
             },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Serilog.Extensions.Logging": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Serilog.Formatting.Compact": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Serilog.Sinks.Console": {
               "target": "Package",

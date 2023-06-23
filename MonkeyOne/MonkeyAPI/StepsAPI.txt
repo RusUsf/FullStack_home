@@ -88,5 +88,20 @@ dotnet add package Serilog
 dotnet add package Serilog.Extensions.Logging
 dotnet add package Serilog.Sinks.Console
 dotnet add package Serilog.Sinks.PostgreSQL
+dotnet add package Serilog.Formatting.Compact
+dotnet add package Serilog.AspNetCore
+
+--Create table in Database
+CREATE TABLE "Logs"
+(
+    "Id" SERIAL PRIMARY KEY,
+    "Message" text,
+    "MessageTemplate" text,
+    "Level" varchar(128),
+    "TimeStamp" TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    "Exception" text,
+    "Properties" jsonb,
+    "LogEvent" text
+)
 
 

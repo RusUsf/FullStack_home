@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonkeyAPI.Models;
+using Serilog;
 
 namespace MonkeyAPI.Controllers
 {
@@ -136,5 +137,21 @@ namespace MonkeyAPI.Controllers
         {
             return (_context.Monkeytables?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        // Test-logging
+        [HttpGet("test-logging")]
+        public IActionResult TestLogging()
+        {
+            try
+            {
+                throw new Exception("This is a test exception to trigger logging");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "An error occurred while testing logging");
+                return StatusCode(500);
+            }
+        }
+
     }
 }
