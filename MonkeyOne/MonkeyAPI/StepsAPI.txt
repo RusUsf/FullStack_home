@@ -90,8 +90,12 @@ dotnet add package Serilog.Sinks.Console
 dotnet add package Serilog.Sinks.PostgreSQL
 dotnet add package Serilog.Formatting.Compact
 dotnet add package Serilog.AspNetCore
+dotnet add package Serilog.UI
+dotnet add package Serilog.UI.PostgreSqlProvider
 
---Create table in Database
+--Create table in Database (Optional) 
+--Use <needAutoCreateTable> in appsettings.json
+
 CREATE TABLE "Logs"
 (
     "Id" SERIAL PRIMARY KEY,
@@ -105,3 +109,4 @@ CREATE TABLE "Logs"
 )
 
 
+--http://localhost:5099/serilog-ui/index.html

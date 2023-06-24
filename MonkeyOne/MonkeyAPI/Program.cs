@@ -5,11 +5,23 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Sinks.PostgreSQL;
 using Microsoft.Extensions.Configuration;
+using Serilog.Ui.PostgreSqlProvider;
+using Serilog.Ui;
+using Serilog.Ui.Web;
+using Microsoft.AspNetCore.Routing;
 
-
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
+
+// Add SerilogUi to Configuration Services
+IServiceCollection services = builder.Services;
 
 // Get configuration
 IConfiguration configuration = builder.Configuration;
@@ -26,6 +38,8 @@ builder.Host.UseSerilog((ctx, lc) => lc
 
 try
 {
+
+builder.Services.AddSerilogUi(options => options.UseNpgSql(builder.Configuration.GetConnectionString("MonkeyDB"), "logs"));
 
 builder.Services.AddDbContext<MonkeyDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MonkeyDB")));
@@ -47,7 +61,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-
+    
 var app = builder.Build();
 
 
@@ -56,15 +70,29 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+    app.UseDeveloperExceptionPage();
+    
 
-app.UseCors("AllowAngularOrigins");
+    }
+
+    app.UseCors("AllowAngularOrigins");
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+app.UseAuthentication();
+
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseSerilogUi();
+
+    app.UseEndpoints(endpoints =>
+    {
+        app.MapControllers();
+    });
+        
+
 
 app.Run();
 }

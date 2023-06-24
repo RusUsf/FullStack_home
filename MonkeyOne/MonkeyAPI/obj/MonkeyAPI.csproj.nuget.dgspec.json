@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
+    "C:\\Users\\User\\Desktop\\Learn_to_Code\\ChatGpt\\SerilogUi\\FullStack_Home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
+    "C:\\Users\\User\\Desktop\\Learn_to_Code\\ChatGpt\\SerilogUi\\FullStack_Home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Learn_to_Code\\ChatGpt\\SerilogUi\\FullStack_Home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "projectName": "MonkeyAPI",
-        "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\ChatGpt\\SerilogUi\\FullStack_Home\\MonkeyOne\\MonkeyAPI\\MonkeyAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\FullStack\\fullstack_home\\MonkeyOne\\MonkeyAPI\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Learn_to_Code\\ChatGpt\\SerilogUi\\FullStack_Home\\MonkeyOne\\MonkeyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -120,6 +120,14 @@
             "Serilog.Sinks.PostgreSQL.Configuration": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "Serilog.UI": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Serilog.UI.PostgreSqlProvider": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
