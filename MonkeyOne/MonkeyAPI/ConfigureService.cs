@@ -1,5 +1,6 @@
 using System.Reflection;
 using MediatR;
+using Serilog.Ui.Web.Authorization;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -15,5 +16,13 @@ public static class ConfigureService
 
         return services;
 
+    }
+}
+
+public class CustomAuthorizeFilter : IUiAuthorizationFilter
+{
+    public bool Authorize(HttpContext httpContext)
+    {
+        return httpContext.User.Identity is { IsAuthenticated: true };
     }
 }

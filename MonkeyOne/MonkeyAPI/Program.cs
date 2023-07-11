@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Identity.Client;
+using Serilog.Ui.Web.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -96,7 +98,19 @@ app.UseAuthorization();
         .SetIsOriginAllowed(origin => true)); 
        
 
-    app.UseSerilogUi();
+
+    app.UseSerilogUi(
+    //    options =>
+    //{
+    //    options.Authorization.AuthenticationType = AuthenticationType.Jwt;
+    //    options.Authorization.Filters = new[]
+    //    {
+    //        new CustomAuthorizeFilter()
+    //    };
+    //}
+    );
+
+    
 
     app.UseEndpoints(endpoints =>
     {
