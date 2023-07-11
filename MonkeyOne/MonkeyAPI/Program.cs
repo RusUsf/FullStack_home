@@ -26,6 +26,7 @@ IServiceCollection services = builder.Services;
 // Get configuration
 IConfiguration configuration = builder.Configuration;
 
+builder.Services.AddMonkeyAPIServices();
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -40,6 +41,7 @@ try
 {
 
 builder.Services.AddSerilogUi(options => options.UseNpgSql(builder.Configuration.GetConnectionString("MonkeyDB"), "logs"));
+builder.Services.AddSerilogUi(options => options.UseNpgSql(builder.Configuration.GetConnectionString("MonkeyDB"), "\"Logs\""));    
 
 builder.Services.AddDbContext<MonkeyDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MonkeyDB")));
