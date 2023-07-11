@@ -58,7 +58,8 @@ builder.Services.AddCors(options =>
                             )
                             .AllowAnyHeader()
                             .AllowAnyMethod();
-    });
+
+});
 });
 
     
@@ -85,7 +86,14 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.UseSerilogUi();
+
+    app.UseCors(x => x
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .SetIsOriginAllowed(origin => true)); 
+       
+
+    app.UseSerilogUi();
 
     app.UseEndpoints(endpoints =>
     {
